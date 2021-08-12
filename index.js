@@ -1,4 +1,4 @@
-const { importer } = require('ipfs-unixfs-importer')
+const { importer } = require('pure-ipfs-unixfs-importer')
 
 const block = {
   get: async cid => { throw new Error(`unexpected block API get for ${cid}`) },

@@ -1,6 +1,6 @@
 {
-  "name": "ipfs-only-hash",
-  "version": "4.0.0",
+  "name": "pure-ipfs-only-hash",
+  "version": "4.0.1",
   "description": "Just enough code to calculate the IPFS hash for some data",
   "main": "index.js",
   "bin": {
@@ -26,15 +26,15 @@
     "standard": "^16.0.3"
   },
   "dependencies": {
-    "ipfs-unixfs-importer": "^7.0.1",
-    "meow": "^9.0.0"
+    "meow": "^9.0.0",
+    "pure-ipfs-unixfs-importer": "^8.0.5"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alanshaw/ipfs-only-hash.git"
+    "url": "git+https://github.com/Airtune/pure-ipfs-only-hash.git"
   },
   "bugs": {
-    "url": "https://github.com/alanshaw/ipfs-only-hash/issues"
+    "url": "https://github.com/Aoirtune/pure-ipfs-only-hash/issues"
   },
-  "homepage": "https://github.com/alanshaw/ipfs-only-hash#readme"
+  "homepage": "https://github.com/Airtune/pure-ipfs-only-hash#readme"
 }
