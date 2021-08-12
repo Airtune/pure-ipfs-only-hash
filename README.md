@@ -1,4 +1,6 @@
-# ipfs-only-hash
+# pure-ipfs-only-hash
+
+Fork of `ipfs-only-hash` without `rabin-wasm` dependency.
 
 [![Build Status](https://travis-ci.org/alanshaw/ipfs-only-hash.svg?branch=master)](https://travis-ci.org/alanshaw/ipfs-only-hash) [![dependencies Status](https://status.david-dm.org/gh/alanshaw/ipfs-only-hash.svg)](https://david-dm.org/alanshaw/ipfs-only-hash) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -7,13 +9,13 @@
 Calculate the IPFS hash for some data without having to install or run an IPFS node. Try it out with npx:
 
 ```
-npx ipfs-only-hash <path to file>
+npx pure-ipfs-only-hash <path to file>
 ```
 
 ## Install
 
 ```sh
-npm i ipfs-only-hash
+npm i --only=production pure-ipfs-only-hash
 ```
 
 ## Usage
@@ -21,16 +23,16 @@ npm i ipfs-only-hash
 From the command line
 
 ```sh
-ipfs-only-hash <file>
+pure-ipfs-only-hash <file>
 
 # or pipe in 
-echo "hello world" | ipfs-only-hash
+echo "hello world" | pure-ipfs-only-hash
 ```
 
 As a library
 
 ```js
-const Hash = require('ipfs-only-hash')
+const Hash = require('pure-ipfs-only-hash')
 const data = 'hello world!'
 const hash = await Hash.of(data)
 console.log(hash) // QmTp2hEo8eXRp6wg7jXv1BLCMh5a4F3B7buAUZNZUu772j
@@ -39,7 +41,7 @@ console.log(hash) // QmTp2hEo8eXRp6wg7jXv1BLCMh5a4F3B7buAUZNZUu772j
 ## API
 
 ```js
-const Hash = require('ipfs-only-hash')
+const Hash = require('pure-ipfs-only-hash')
 ```
 
 ### `Hash.of(input, options?): Promise<string>`
@@ -47,7 +49,7 @@ const Hash = require('ipfs-only-hash')
 Calculate the hash for the provided input.
 
 * `input` (`string|Uint8Array|AsyncIterable<Uint8Array>`): The input bytes to calculate the IPFS hash for. Note that Node.js readable streams are async iterable!
-* `options` (`Object`): Optional options passed directly to the `ipfs-unixfs-importer` module. See the [API docs](https://github.com/ipfs/js-ipfs-unixfs-importer#api) for possible values.
+* `options` (`Object`): Optional options passed directly to the `pure-ipfs-unixfs-importer` module. See the [API docs](https://github.com/ipfs/js-ipfs-unixfs-importer#api) for possible values.
 
 ## Contribute
 
